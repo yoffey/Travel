@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="(item, index) of itemList" :key="'item' + index">
+      <li class="item border-bottom" v-for="(item, index) of list" :key="'item' + index">
         <img class="item-img" :src="item.imgUrl">
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -17,25 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      itemList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1805/7d/7dca9c37a87479eba3.img.jpg_200x200_f62f78bd.jpg',
-        title: '世茂云上厦门观光厅',
-        desc: '厦门市思明区大学路世茂海峡大厦B塔'
-      }, {
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1805/7d/7dca9c37a87479eba3.img.jpg_200x200_f62f78bd.jpg',
-        title: '世茂云上厦门观光厅',
-        desc: '厦门市思明区大学路世茂海峡大厦B塔'
-      }, {
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1805/7d/7dca9c37a87479eba3.img.jpg_200x200_f62f78bd.jpg',
-        title: '世茂云上厦门观光厅',
-        desc: '厦门市思明区大学路世茂海峡大厦B塔'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
