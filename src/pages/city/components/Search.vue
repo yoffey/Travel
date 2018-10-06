@@ -3,7 +3,7 @@
     <div class="search">
       <input v-model="keyword" type="text" placeholder="输入城市名或拼音" class="search-input">
     </div>
-    <div class="search-content" ref="wrapper">
+    <div class="search-content" ref="wrapper" v-show="keyword">
       <ul>
         <li class="search-item border-bottom" v-for="city in list" :key="city.id">
           {{city.name}}
