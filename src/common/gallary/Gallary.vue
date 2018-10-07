@@ -1,7 +1,7 @@
 <template>
   <div class="container" @click='handleContainerClick'>
     <div class="wrapper">
-      <swiper :options="swiperOptions">
+      <swiper :options="swiperOptions" v-if="this.imgs.length">
         <swiper-slide v-for="(item, index) in imgs" :key="index">
           <img class="gallary-img" :src="item">
         </swiper-slide>
